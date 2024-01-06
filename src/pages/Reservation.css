@@ -1,0 +1,12 @@
+.Reservation form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin: 2rem 15rem 2rem 15rem;
+    height: 500px;
+}
+
+.Rerservation form label{
+    color:#495E57;
+}

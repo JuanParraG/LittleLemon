@@ -1,0 +1,88 @@
+.Init{
+    display: grid;
+    height: auto;
+    background-color: #EDEFEE;
+    grid-template: 1fr/repeat(12, 1fr);
+    padding: 3rem 2rem 3rem 2rem;
+}
+.Init img{
+    height: 20vw;
+    margin: 1rem 0 1rem 0;
+    min-width: 100px;
+    max-width: 500px;
+}
+.Init .text{
+    align-self: center;
+    grid-column: 3/7;
+}
+.Init .img{
+    align-self: center;
+    justify-self: center;
+    grid-column: 8/-1;
+}
+
+.Init h1 {
+    color: #F4CE14;
+}
+
+.Specials{
+    display: grid;
+    height: auto;
+    grid-template: 1fr 4fr /repeat(12, 1fr);
+    padding: 3rem 2rem 3rem 2rem;
+}
+
+.CardsMenu{
+    grid-area: 2/3/3/11 ;
+    gap: 30px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#titleSpecials {
+    grid-column: 2/5;
+    grid-row: 1/2;
+}
+
+#buttonMenu{
+    grid-column: -4/-2 ;
+    grid-row: 1/2;
+    width: 150px;
+}
+
+.Testimonial{
+    display: grid;
+    height: auto;
+    background-color: #495E57;
+    grid-template: 1fr 4fr /repeat(12, 1fr);
+    padding: 3rem 2rem 3rem 2rem;
+}
+
+#titleTestimonial {
+    color: #F4CE14;
+    justify-self: center;
+    grid-column: 5/8;
+    grid-row: 1/2;
+}
+
+.Advertising{
+    display: grid;
+    height: auto;
+
+    grid-template: 1fr 2fr 1fr /repeat(12, 1fr);
+    padding: 3rem 2rem 3rem 2rem;
+}
+
+.Advertising .text{
+    grid-area: 1/3/-1/7;
+}
+
+.Advertising #imgRestauranChef{
+    grid-area: 1/9/-1/-1;
+}
+
+.Advertising #imgRestauran{
+    grid-area: 2/8/3/-1;
+    order: -1;
+}

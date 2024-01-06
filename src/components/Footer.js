@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
+import {Heading, Image } from "@chakra-ui/react";
+import logo from "../sources/icon.png"
 
 function Footer(){
     return(
         <footer>
-            <img/>
-            <div>
-                <h3>Doormat Navigation</h3>
+            <Image
+                src={logo}
+                alt="Yellow Lemon. Little lemon's logo."
+                />
+            <div className="Navigation">
+                <Heading as="h3" size="sm">Doormat Navigation</Heading>
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/About">About</Link></li>
@@ -15,16 +20,16 @@ function Footer(){
                     <li><Link to="/Login">Login</Link></li>
                 </ul>
             </div>
-            <div>
-                <h3>Contact</h3>
+            <div className="Contact">
+                <Heading as="h3" size="sm">Contact</Heading>
                     <ul>
                         <li><a href="">Adress</a></li>
                         <li><a href="">Phone number</a></li>
                         <li><a href="">Email</a></li>
                     </ul>
             </div>
-            <div>
-                <h3>Social Media</h3>
+            <div className="SocialMedia">
+                <Heading as="h3" size="sm">Social Media</Heading>
                     <ul>
                         <li><a href="">facebook</a></li>
                     </ul>

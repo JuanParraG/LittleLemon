@@ -1,8 +1,9 @@
+import { Button, Heading } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Nav from "../components/Nav";
-
+import "./Reservation.css"
 
 function Reservations(){
     return(
@@ -11,50 +12,39 @@ function Reservations(){
             <Nav/>
             <Main>
                 <div>
-                    <h2>Reservate table</h2>
+                    <Heading as="h2" size="xl">Reservate table</Heading>
                 </div>
-                <section>
-                    <form>
-                        <div>
-                            <label for="day">Day: </label>
-                            <input type="date" id="day" name="day"/>
-                            <label for="hour">Hour: </label>
-                            <input type="time" id="hour" name="time" min="9:00" max="22:00"/>
-                        </div>
-                        <div>
-                            <label>N° of people: </label>
-                            <label for="2">2</label>
-                            <input type="checkbox" id="2"></input>
-                            <label for="4">4</label>
-                            <input type="checkbox" id="4"></input>
-                            <label for="6">6</label>
-                            <input type="checkbox" id="6"></input>
-                            <label for="other">other: </label>
-                            <input type="number" id="other" min={1} max={30}></input>
-                        </div>
-                        <div>
-                            <label>table: </label>
-                            <div>
-                                <input type="checkbox" ></input>
-                                <input type="checkbox" ></input>
-                                <input type="checkbox" ></input>
-                            </div>
-                            <div>
-                                <input type="checkbox" ></input>
-                                <input type="checkbox" ></input>
-                                <input type="checkbox" ></input>
-                            </div>
-                            <div>
-                                <input type="checkbox" ></input>
-                                <input type="checkbox" ></input>
-                                <input type="checkbox" ></input>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="observations">Observations: </label>
-                            <input type="text" id="observations"/>
-                        </div>
-                    </form>
+                <section className="Reservation">
+                <form>
+                <label for="res-date">Choose date</label>
+                    <input type="date" id="res-date"/>
+                    <label for="res-time">Choose time</label>
+                    <select id="res-time ">
+                        <option>17:00</option>
+                        <option>18:00</option>
+                        <option>19:00</option>
+                        <option>20:00</option>
+                        <option>21:00</option>
+                        <option>22:00</option>
+                    </select>
+                    <label for="guests">Number of guests</label>
+                    <input type="number" placeholder="1" min="1" max="10" id="guests"/>
+                    <label for="occasion">Occasion</label>
+                    <select id="occasion">
+                        <option>Birthday</option>
+                        <option>Anniversary</option>
+                    </select>
+                    <Button
+                    w="200px"
+                    alignSelf="center"
+                    colorScheme="yellow"
+                    backgroundColor="#F4CE14"
+                    color="#495E57"
+                    type="submit"
+                    >
+                    Make Your reservation
+                    </Button>
+                </form>
                 </section>
             </Main>
             <Footer/>
